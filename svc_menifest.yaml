@@ -2,11 +2,11 @@ apiVersion: v1
 kind: Service
 metadata:
   name: flask-service
+  namespace: default  # 실제 네임스페이스에 맞게 수정
 spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 5000
   selector:
     app: flask
-  ports:
-  - protocol: TCP
-    port: 80         # 외부에서 접속할 포트 (원하면 80, 8080 등 변경 가능)
-    targetPort: 5000    # 컨테이너 내부에서 서비스되는 포트
-  type: LoadBalancer
