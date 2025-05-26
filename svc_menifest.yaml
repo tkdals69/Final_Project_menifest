@@ -9,4 +9,4 @@ spec:
   - protocol: TCP
     port: 5000          # 외부에서 접속할 포트 (원하면 80, 8080 등 변경 가능)
     targetPort: 5000    # 컨테이너 내부에서 서비스되는 포트
-  type: NodePort 
+  type: LoadBalancer
