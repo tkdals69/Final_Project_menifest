@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: flask
-        image: klksm2/test
+        image: klksm2/flask-app
         ports:
         - containerPort: 5000  # Flask listen port
-      
+
+           
