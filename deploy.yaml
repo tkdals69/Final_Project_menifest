@@ -16,6 +16,9 @@ spec:
       - name: flask
         image: klksm2/flask-app
         ports:
-        - containerPort: 5000  # Flask listen port
+          - containerPort: 5000  # Flask listen port
+        env:
+          - name: FLASK_ENV
+           value: prduction
 
            
