@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: flask
-          image: klksm2/flask-app:23
+          image: klksm2/flask-app:24
           ports:
             - containerPort: 5000
           env:
