@@ -10,7 +10,7 @@ metadata:
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
 spec:
   rules:
-    - host: flask.example.com  # 실제 도메인으로 교체
+    - host: flask.adu4gl.click  # 실제 도메인으로 교체
       http:
         paths:
           - path: /
