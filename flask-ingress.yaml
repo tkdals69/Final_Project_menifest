@@ -7,7 +7,9 @@ metadata:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
-    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}]'
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}], {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:070561229556:certificate/18c230ba-2049-4f60-b886-8cae402ed9be
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
 spec:
   rules:
     - host: flask.adu4gl.click  # 실제 도메인으로 교체
