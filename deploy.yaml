@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-deployment
+  namespace: default
 spec:
   replicas: 2
   selector:
@@ -13,12 +14,10 @@ spec:
         app: flask
     spec:
       containers:
-      - name: flask
-        image: klksm2/flask-app
-        ports:
-          - containerPort: 5000  # Flask listen port
-        env:
-          - name: FLASK_ENV
-           value: prduction
-
-           
+        - name: flask
+          image: klksm2/flask-app
+          ports:
+            - containerPort: 5000
+          env:
+            - name: FLASK_ENV
+              value: production
